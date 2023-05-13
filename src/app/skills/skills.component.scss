@@ -1,0 +1,77 @@
+$dark-background: #281328;
+$neon-pink: #B900B9;
+$light-background: #2F162F;
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: $light-background;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin-top: 10rem;
+    font-family: poppins;
+}
+
+.title .my {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.title .skills {
+    font-size: 3rem;
+    color: $neon-pink;
+    text-align: center;
+}
+
+.box-skills {
+    display: flex;
+    justify-content: center;
+}
+
+.square-roll {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.square {
+    width: 200px;
+    height: 180px;
+    background-color: $dark-background;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    animation: square-roll 1s infinite;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    &:hover {
+        transform: scale(1.3);
+        transition: 0.5s;
+    }
+}
+
+.small-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+}
+
+.small-box p {
+    margin-top: 1rem;
+}

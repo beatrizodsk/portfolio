@@ -1,0 +1,155 @@
+$dark-background: #281328;
+$neon-pink: #B900B9;
+$light-background: #2F162F;
+
+.container {
+    position: relative;
+    height: 95vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: $light-background;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    font-family: poppins;
+}
+
+.title .contact {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.title .me {
+    font-size: 3rem;
+    color: $neon-pink;
+    text-align: center;
+}
+
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name-email input {
+    margin-top: 1rem;
+    width: 20rem;
+    border-color: $neon-pink;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-family: poppins;
+    font-size: 1rem;
+    color: white;
+    background: none;
+    transition: all .3s;
+    margin: 0.5rem;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 20px $neon-pink;
+    }
+}
+
+.text-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-button input {
+    margin-top: 1rem;
+    width: 46rem;
+    border-color: $neon-pink;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-family: poppins;
+    font-size: 1rem;
+    color: white;
+    background: none;
+    transition: all .3s;
+    margin: 0.5rem;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 20px $neon-pink;
+    }
+}
+
+textarea {
+    margin-top: 1rem;
+    width: 46rem;
+    border-color: $neon-pink;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-family: poppins;
+    font-size: 1rem;
+    color: white;
+    background: none;
+    transition: all .3s;
+    margin: 0.5rem;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 20px $neon-pink;
+    }
+}
+
+button {
+    margin-top: 1rem;
+    background-color: $neon-pink;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    color: white;
+    font-family: poppins;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 10rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .10rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10rem;
+        background-color: $neon-pink;
+        border-radius: 10rem;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($neon-pink, 15%);
+        transition: all .3s;
+        border-radius: 5px;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+        width: 10rem;
+        }
+    }
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}

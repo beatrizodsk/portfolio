@@ -1,0 +1,46 @@
+$dark-background: #281328;
+$neon-pink: #B900B9;
+
+.container {
+    position: fixed;
+    background-color: $dark-background;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.name-nav {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 7rem;
+    margin-top: 2rem;
+    font-family: poppins;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    list-style: none;
+    margin-right: 5rem;
+    padding: 0;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+    font-family: poppins;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    &:hover {
+        color: $neon-pink;
+        transition: 0.5s;
+    }
+}

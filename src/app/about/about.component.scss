@@ -1,0 +1,192 @@
+$dark-background: #281328;
+$neon-pink: #B900B9;
+$light-background: #2F162F;
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: $light-background;
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 10rem;
+    font-family: poppins;
+}
+
+.title .about {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.title .me {
+    font-size: 3rem;
+    color: $neon-pink;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-animation {
+    --border-size: 5px;
+    --border-angle: 0turn;
+    width: 19rem;
+    height: 19.5rem;
+    border-radius: 28%;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 50%,
+        #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2))
+        calc(100% - (var(--border-size) * 2)),
+    cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    animation: bg-spin 3s linear infinite;
+    @keyframes bg-spin {
+        to {
+            --border-angle: 1turn;
+        }
+    }
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+.right-box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-right: 5rem;;
+}
+
+.square-roll {
+    display: flex;
+}
+
+.square {
+    width: 200px;
+    height: 180px;
+    background-color: $dark-background;
+    margin-right: 1rem;
+    animation: square-roll 1s infinite;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.small-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-box img {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 1rem;
+}
+
+.medal {
+    width: 40% !important;
+    height: 40% !important;
+    margin-bottom: 1rem;
+}
+
+.small-text {
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-family: poppins;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+button {
+    margin-top: 2rem;
+    background-color: $neon-pink;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    color: white;
+    font-family: poppins;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 10rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .10rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10rem;
+        background-color: $neon-pink;
+        border-radius: 10rem;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($neon-pink, 15%);
+        transition: all .3s;
+        border-radius: 5px;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+        width: 10rem;
+        }
+    }
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
